@@ -1,0 +1,3161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Teqvora is an eCommerce and technology agency helping brands launch, manage, optimize and scale their online businesses.">
+
+    <meta   name="theme-color"   content="#ffffff">
+
+    <title>TEQVORA — eCommerce & Technology Agency</title>
+
+    <!-- =========================================================
+         FONTS
+    ========================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =========================================================
+         FONT AWESOME
+    ========================================================== -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    >
+
+    <!-- =========================================================
+         SWIPER
+    ========================================================== -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    >
+
+    <!-- Skip the loader on repeat page views within the same session -->
+    <script>
+        try {
+            if (sessionStorage.getItem('teqvoraLoaderShown')) {
+                document.documentElement.classList.add('skip-loader');
+            }
+        } catch (error) {}
+    </script>
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="final.css">
+</head>
+
+
+<body>
+
+
+<!-- =============================================================
+     PAGE WRAPPER
+============================================================= -->
+
+
+<div data-scroll-container>
+
+<!-- =============================================================
+     PAGE WRAPPER
+============================================================= -->
+
+<div class="page">
+
+
+    <!-- =========================================================
+         HEADER / NAVBAR
+    ========================================================== -->
+
+    <header class="site-header">
+
+        <div class="container">
+
+            <nav class="navbar" aria-label="Main Navigation">
+
+                <!-- LOGO -->
+                <a href="#home" class="brand" aria-label="TEQVORA home">
+
+                    <span class="brand-mark">
+                        <img src="logo.jpeg" alt="" width="44" height="44">
+                        <span>TQ</span>
+                    </span>
+
+                    <span class="brand-text">
+                        <strong>TEQVORA</strong>
+                        <small>eCommerce &amp; Technology Agency</small>
+                    </span>
+
+                </a>
+
+
+                <!-- DESKTOP NAVIGATION -->
+                <div class="desktop-nav">
+
+                    <a href="#home" class="nav-link active">
+                        Home
+                    </a>
+
+                    <a href="#about" class="nav-link">
+                        About
+                    </a>
+
+                    <a href="#leadership" class="nav-link">
+                        Leadership
+                    </a>
+
+
+                    <div class="nav-dropdown">
+
+                        <button
+                            class="nav-dropdown-btn"
+                            type="button"
+                            aria-expanded="false"
+                        >
+                            Services
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+
+                        <div class="nav-dropdown-menu">
+
+                            <a href="service.html">
+                                <i class="fa-brands fa-shopify"></i>
+                                Shopify Development
+                            </a>
+
+                            <a href="service.html">
+                                <i class="fa-brands fa-amazon"></i>
+                                Amazon FBA
+                            </a>
+
+                            <a href="service.html">
+                                <i class="fa-brands fa-tiktok"></i>
+                                TikTok Shop
+                            </a>
+
+                            <a href="service.html">
+                                <i class="fa-solid fa-store"></i>
+                                Walmart Marketplace
+                            </a>
+
+                            <a href="service.html">
+                                <i class="fa-brands fa-etsy"></i>
+                                Etsy Store
+                            </a>
+
+                            <a href="service.html">
+                                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                                Product Research
+                            </a>
+
+                            <a href="service.html">
+                                <i class="fa-solid fa-chart-line"></i>
+                                Amazon PPC
+                            </a>
+
+                            <a href="service.html">
+                                <i class="fa-solid fa-list-check"></i>
+                                Listing Optimization
+                            </a>
+
+                            <a href="service.html">
+                                <i class="fa-solid fa-pen-ruler"></i>
+                                Branding & Design
+                            </a>
+
+                            <a href="service.html">
+                                <i class="fa-solid fa-headset"></i>
+                                Virtual Assistant
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <a href="#process" class="nav-link">
+                        Process
+                    </a>
+
+                    <a href="#technologies" class="nav-link">
+                        Technologies
+                    </a>
+
+                    <a href="#portfolio" class="nav-link">
+                        Portfolio
+                    </a>
+
+                    <a href="#testimonials" class="nav-link">
+                        Testimonials
+                    </a>
+
+                    <a href="#faq" class="nav-link">
+                        FAQs
+                    </a>
+
+                </div>
+
+
+                <!-- NAV CTA -->
+                <a href="#contact" class="nav-cta">
+                    Book a Consultation
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+
+                <!-- MOBILE MENU BUTTON -->
+                <button
+                    class="menu-toggle"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded="false"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         MOBILE DRAWER
+    ========================================================== -->
+
+    <aside
+        class="mobile-drawer"
+        id="mobileDrawer"
+        aria-hidden="true"
+    >
+
+        <div class="mobile-drawer-header">
+
+            <a href="#home" class="brand">
+
+                <span class="brand-mark">
+                    <img src="logo.jpeg" alt="" width="44" height="44">
+                    <span>TQ</span>
+                </span>
+
+                <span class="brand-text">
+                    <strong>TEQVORA</strong>
+                    <small>eCommerce & Technology Agency</small>
+                </span>
+
+            </a>
+
+            <button
+                id="drawerClose"
+                class="drawer-close"
+                type="button"
+                aria-label="Close menu"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <div class="mobile-nav">
+
+            <a href="#home"><span>Home</span></a>
+            <a href="#about"><span>About</span></a>
+            <a href="#leadership"><span>Leadership</span></a>
+            <a href="#services"><span>Services</span></a>
+            <a href="#process"><span>Process</span></a>
+            <a href="#technologies"><span>Technologies</span></a>
+            <a href="#portfolio"><span>Portfolio</span></a>
+            <a href="#testimonials"><span>Testimonials</span></a>
+            <a href="#faq"><span>FAQs</span></a>
+
+            <a href="#contact" class="mobile-nav-cta">
+                Book a Consultation
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </aside>
+
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+
+    <main>
+
+
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
+
+        <section
+            class="hero-section"
+            id="home"
+           
+        >
+
+            <!-- soft technology background -->
+            <div class="hero-glow hero-glow-one"></div>
+            <div class="hero-glow hero-glow-two"></div>
+
+
+            <div class="container">
+
+                <div class="hero-grid">
+
+
+                    <!-- HERO CONTENT -->
+
+                    <div class="hero-content">
+
+                        <span class="eyebrow">
+                            <i class="fa-solid fa-circle-nodes"></i>
+                            eCommerce • Technology • Growth
+                        </span>
+
+
+                        <h1>
+                            Powering eCommerce Growth with
+                            <span>Strategy, Technology & Results.</span>
+                        </h1>
+
+
+                        <p class="hero-description">
+                            Teqvora is a results-driven eCommerce and
+                            technology agency helping businesses launch,
+                            manage, optimize, and scale their online stores
+                            across leading marketplaces and platforms.
+                        </p>
+
+
+                        <div class="hero-actions">
+
+                            <a href="#contact" class="btn btn-primary">
+                                Get Started
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                            <a href="#services" class="btn btn-secondary">
+                                Explore Our Services
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+                        <div class="hero-trust">
+
+                            <span>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Trusted by ambitious businesses
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-globe"></i>
+                                Global Reach
+                            </span>
+
+                            <span>
+                                <i class="fa-solid fa-chart-line"></i>
+                                Data-Driven Strategies
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- HERO VISUAL -->
+
+                    <div class="hero-visual">
+
+                        <div class="hero-visual-glow"></div>
+
+                        <div class="hero-image-wrap">
+
+                           <img src="hero.png" alt="Teqvora eCommerce storefront on desktop and mobile with shopping cart and parcels" width="1672" height="941" fetchpriority="high" decoding="async">
+                               
+            
+
+                        </div>
+
+
+                        <!-- FLOATING METRICS -->
+
+                        <div class="metric-card metric-sales">
+
+                            <span class="metric-icon">
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                            </span>
+
+                            <strong>+38%</strong>
+
+                            <small>Sales Growth</small>
+
+                        </div>
+
+
+                        <div class="metric-card metric-conversion">
+
+                            <span class="metric-icon">
+                                <i class="fa-solid fa-chart-column"></i>
+                            </span>
+
+                            <strong>+28%</strong>
+
+                            <small>Conversion</small>
+
+                        </div>
+
+
+                        <div class="metric-card metric-reach">
+
+                            <span class="metric-icon">
+                                <i class="fa-solid fa-earth-americas"></i>
+                            </span>
+
+                            <strong>Global</strong>
+
+                            <small>Market Reach</small>
+
+                        </div>
+
+
+                        <div class="metric-card metric-performance">
+
+                            <div class="performance-ring">
+                                85%
+                            </div>
+
+                            <small>Performance</small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             TRUSTED PLATFORMS
+        ====================================================== -->
+
+        <section
+            class="platform-strip"
+           
+        >
+
+            <div class="container">
+
+                <div class="platform-heading">
+                    Trusted by ambitious brands worldwide
+                </div>
+
+
+                <div class="platform-track">
+
+                    <span>
+                        <i class="fa-brands fa-shopify"></i>
+                        Shopify
+                    </span>
+
+                    <span>
+                        <i class="fa-brands fa-amazon"></i>
+                        Amazon
+                    </span>
+
+                    <span>
+                        <i class="fa-brands fa-tiktok"></i>
+                        TikTok Shop
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-store"></i>
+                        Walmart
+                    </span>
+
+                    <span>
+                        <i class="fa-brands fa-etsy"></i>
+                        Etsy
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        WooCommerce
+                    </span>
+
+                    <span>
+                        <i class="fa-brands fa-wordpress"></i>
+                        WordPress
+                    </span>
+
+                    <span>
+                        <i class="fa-brands fa-stripe"></i>
+                        Stripe
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-chart-simple"></i>
+                        Google Analytics
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-envelope"></i>
+                        Mailchimp
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ABOUT
+             COMPLETELY SEPARATE SECTION
+        ====================================================== -->
+
+        <section
+            class="about-section section-space"
+            id="about"
+           
+        >
+
+            <div class="container">
+
+                <div class="about-grid">
+
+
+                    <!-- LEFT CONTENT -->
+
+                    <div class="about-content">
+
+                        <span class="section-label">
+                            ABOUT TEQVORA
+                        </span>
+
+
+                        <h2>
+                            Technology That Moves
+                            Your Business Forward.
+                        </h2>
+
+
+                        <p>
+                            Teqvora is an eCommerce and technology agency
+                            dedicated to helping brands build and grow
+                            successful online businesses.
+                        </p>
+
+
+                        <p>
+                            We provide end-to-end solutions across Shopify,
+                            Amazon, Walmart, TikTok Shop, Etsy, and other
+                            major eCommerce platforms.
+                        </p>
+
+
+                        <p>
+                            Our mission is to combine strategic expertise,
+                            technology, and data-driven execution to deliver
+                            sustainable growth and measurable results.
+                        </p>
+
+
+                        <!-- ABOUT SKILLS -->
+
+                        <div class="about-highlights">
+
+                            <article class="highlight-item">
+
+                                <span class="highlight-icon">
+                                    <i class="fa-solid fa-lightbulb"></i>
+                                </span>
+
+                                <div>
+                                    <strong>Expertise</strong>
+                                    <span>Industry-led specialists</span>
+                                </div>
+
+                            </article>
+
+
+                            <article class="highlight-item">
+
+                                <span class="highlight-icon">
+                                    <i class="fa-solid fa-compass"></i>
+                                </span>
+
+                                <div>
+                                    <strong>Strategy</strong>
+                                    <span>Data-driven approach</span>
+                                </div>
+
+                            </article>
+
+
+                            <article class="highlight-item">
+
+                                <span class="highlight-icon">
+                                    <i class="fa-solid fa-bolt"></i>
+                                </span>
+
+                                <div>
+                                    <strong>Execution</strong>
+                                    <span>Results that last</span>
+                                </div>
+
+                            </article>
+
+                        </div>
+
+
+                        <a href="#services" class="text-link">
+                            Explore what we do
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <!-- RIGHT IMAGE + STATS -->
+
+                    <div class="about-visual">
+
+                        <div class="about-image">
+
+                            <img loading="lazy" decoding="async"
+                                src="about.avif"
+                                alt="Teqvora team working on eCommerce projects"
+                            >
+
+                        </div>
+
+
+                        <div class="about-stats">
+
+                            <div class="stat-item">
+
+                                <strong>5+</strong>
+
+                                <span>Years of Excellence</span>
+
+                            </div>
+
+
+                            <div class="stat-item">
+
+                                <strong>150+</strong>
+
+                                <span>Projects Delivered</span>
+
+                            </div>
+
+
+                            <div class="stat-item">
+
+                                <strong>98%</strong>
+
+                                <span>Client Satisfaction</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             LEADERSHIP
+        ====================================================== -->
+
+        <section
+            class="leadership-section section-space"
+            id="leadership"
+        >
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        OUR LEADERSHIP
+                    </span>
+
+                    <h2>
+                        Meet the People Behind TEQVORA
+                    </h2>
+
+                    <p>
+                        The founders guiding Teqvora's direction, standards
+                        and the results we deliver for clients.
+                    </p>
+
+                </div>
+
+
+                <div class="leadership-grid">
+
+                    <article class="leader-card">
+
+                        
+                        <!-- <div class="leader-photo">
+                            <span class="leader-monogram" aria-hidden="true">R</span>
+                        </div> -->
+
+                        <div class="leader-info">
+                            <span class="leader-role">Founder</span>
+                            <h3>Rafay</h3>
+                            <p>
+                                Sets the vision and standards behind every
+                                Teqvora engagement.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="leader-card">
+
+<!--                        
+                        <div class="leader-photo">
+                            <span class="leader-monogram" aria-hidden="true">A</span>
+                        </div> -->
+
+                        <div class="leader-info">
+                            <span class="leader-role">Co-Founder</span>
+                            <h3>Muhammad Ayan</h3>
+                            <p>
+                                Works with clients and the team to turn
+                                strategy into measurable growth.
+                            </p>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SERVICES
+             COMPLETELY SEPARATE FROM ABOUT
+        ====================================================== -->
+
+        <section
+            class="services-section section-space"
+            id="services"
+           
+        >
+
+            <div class="container">
+
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        OUR SERVICES
+                    </span>
+
+                    <h2>
+                        Complete eCommerce Solutions
+                        for Your Business
+                    </h2>
+
+                    <p>
+                        From marketplace strategy to custom store
+                        development, we build systems designed for
+                        measurable revenue growth.
+                    </p>
+
+                </div>
+
+
+                <div class="services-grid">
+
+
+                    <!-- SERVICE 01 -->
+
+                    <article class="service-card">
+
+                        <div class="service-card-top">
+
+                            <span class="service-number">
+                                01
+                            </span>
+
+                            <span class="service-icon">
+                                <i class="fa-brands fa-shopify"></i>
+                            </span>
+
+                        </div>
+
+                        <h3>Shopify Development</h3>
+
+                        <p>
+                            Build a professional and conversion-focused
+                            Shopify store designed for your brand and
+                            customers.
+                        </p>
+
+                        <a
+                            href="service.html"
+                            class="service-link"
+                        >
+                            Learn More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- SERVICE 02 -->
+
+                    <article class="service-card">
+
+                        <div class="service-card-top">
+
+                            <span class="service-number">
+                                02
+                            </span>
+
+                            <span class="service-icon">
+                                <i class="fa-brands fa-amazon"></i>
+                            </span>
+
+                        </div>
+
+                        <h3>Amazon FBA Management</h3>
+
+                        <p>
+                            Strategic product management, listing
+                            optimization, inventory planning and
+                            marketplace operations.
+                        </p>
+
+                        <a
+                            href="service.html"
+                            class="service-link"
+                        >
+                            Learn More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- SERVICE 03 -->
+
+                    <article class="service-card">
+
+                        <div class="service-card-top">
+
+                            <span class="service-number">
+                                03
+                            </span>
+
+                            <span class="service-icon">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </span>
+
+                        </div>
+
+                        <h3>TikTok Shop Management</h3>
+
+                        <p>
+                            Shop setup, product listings, affiliate
+                            management, creator outreach and campaign
+                            strategies.
+                        </p>
+
+                        <a
+                            href="service.html"
+                            class="service-link"
+                        >
+                            Learn More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- SERVICE 04 -->
+
+                    <article class="service-card">
+
+                        <div class="service-card-top">
+
+                            <span class="service-number">
+                                04
+                            </span>
+
+                            <span class="service-icon">
+                                <i class="fa-solid fa-store"></i>
+                            </span>
+
+                        </div>
+
+                        <h3>Walmart Marketplace</h3>
+
+                        <p>
+                            Establish, optimize and manage your Walmart
+                            Marketplace presence with better listings
+                            and growth strategies.
+                        </p>
+
+                        <a
+                            href="service.html"
+                            class="service-link"
+                        >
+                            Learn More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- SERVICE 05 -->
+
+                    <article class="service-card">
+
+                        <div class="service-card-top">
+
+                            <span class="service-number">
+                                05
+                            </span>
+
+                            <span class="service-icon">
+                                <i class="fa-brands fa-etsy"></i>
+                            </span>
+
+                        </div>
+
+                        <h3>Etsy Store Management</h3>
+
+                        <p>
+                            SEO-focused listings, product research and
+                            store management designed to increase
+                            visibility and sales.
+                        </p>
+
+                        <a
+                            href="service.html"
+                            class="service-link"
+                        >
+                            Learn More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- SERVICE 06 -->
+
+                    <article class="service-card">
+
+                        <div class="service-card-top">
+
+                            <span class="service-number">
+                                06
+                            </span>
+
+                            <span class="service-icon">
+                                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                            </span>
+
+                        </div>
+
+                        <h3>Product Research & Sourcing</h3>
+
+                        <p>
+                            Research-driven product discovery focused on
+                            demand, competition, profitability and sourcing
+                            opportunities.
+                        </p>
+
+                        <a
+                            href="service.html"
+                            class="service-link"
+                        >
+                            Learn More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- SERVICE 07 -->
+
+                    <article class="service-card">
+
+                        <div class="service-card-top">
+
+                            <span class="service-number">
+                                07
+                            </span>
+
+                            <span class="service-icon">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </span>
+
+                        </div>
+
+                        <h3>Amazon PPC</h3>
+
+                        <p>
+                            Data-driven campaign management designed to
+                            improve visibility, control advertising costs
+                            and generate profitable sales.
+                        </p>
+
+                        <a
+                            href="service.html"
+                            class="service-link"
+                        >
+                            Learn More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- SERVICE 08 -->
+
+                    <article class="service-card">
+
+                        <div class="service-card-top">
+
+                            <span class="service-number">
+                                08
+                            </span>
+
+                            <span class="service-icon">
+                                <i class="fa-solid fa-list-check"></i>
+                            </span>
+
+                        </div>
+
+                        <h3>Product Listing Optimization</h3>
+
+                        <p>
+                            Compelling titles, descriptions, keywords and
+                            visual content designed to improve search
+                            visibility and conversion.
+                        </p>
+
+                        <a
+                            href="service.html"
+                            class="service-link"
+                        >
+                            Learn More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- SERVICE 09 -->
+
+                    <article class="service-card">
+
+                        <div class="service-card-top">
+
+                            <span class="service-number">
+                                09
+                            </span>
+
+                            <span class="service-icon">
+                                <i class="fa-solid fa-pen-ruler"></i>
+                            </span>
+
+                        </div>
+
+                        <h3>Branding & Graphic Design</h3>
+
+                        <p>
+                            Brand identities, product creatives, social
+                            graphics, banners and marketing visuals.
+                        </p>
+
+                        <a
+                            href="service.html"
+                            class="service-link"
+                        >
+                            Learn More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- SERVICE 10 -->
+
+                    <article class="service-card">
+
+                        <div class="service-card-top">
+
+                            <span class="service-number">
+                                10
+                            </span>
+
+                            <span class="service-icon">
+                                <i class="fa-solid fa-headset"></i>
+                            </span>
+
+                        </div>
+
+                        <h3>Virtual Assistant Services</h3>
+
+                        <p>
+                            Support with operations, research, listings,
+                            customer service, store management and
+                            everyday eCommerce tasks.
+                        </p>
+
+                        <a
+                            href="service.html"
+                            class="service-link"
+                        >
+                            Learn More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             WHY TEQVORA
+             SEPARATE SECTION
+        ====================================================== -->
+
+        <section
+            class="why-section section-space"
+           
+        >
+
+            <div class="tech-blur tech-blur-left"></div>
+            <div class="tech-blur tech-blur-right"></div>
+
+
+            <div class="container">
+
+                <div class="why-grid">
+
+
+                    <div class="why-content">
+
+                        <span class="section-label">
+                            WHY TEQVORA
+                        </span>
+
+                        <h2>
+                            Built Around Your
+                            Business Goals.
+                        </h2>
+
+                        <p>
+                            We combine marketplace expertise,
+                            technology, creative thinking and
+                            data-driven execution to create solutions
+                            that support long-term growth.
+                        </p>
+
+                    </div>
+
+
+                    <div class="why-features">
+
+                        <article class="why-feature">
+
+                            <span>
+                                <i class="fa-solid fa-bullseye"></i>
+                            </span>
+
+                            <div>
+                                <h3>Goal-Focused</h3>
+
+                                <p>
+                                    Every strategy starts with your
+                                    business objectives.
+                                </p>
+                            </div>
+
+                        </article>
+
+
+                        <article class="why-feature">
+
+                            <span>
+                                <i class="fa-solid fa-database"></i>
+                            </span>
+
+                            <div>
+                                <h3>Data-Driven</h3>
+
+                                <p>
+                                    Decisions backed by research,
+                                    analytics and performance.
+                                </p>
+                            </div>
+
+                        </article>
+
+
+                        <article class="why-feature">
+
+                            <span>
+                                <i class="fa-solid fa-arrows-to-circle"></i>
+                            </span>
+
+                            <div>
+                                <h3>Scalable</h3>
+
+                                <p>
+                                    Systems designed to grow with
+                                    your business.
+                                </p>
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PROCESS
+             SEPARATE + CLEAN VERTICAL TIMELINE
+        ====================================================== -->
+
+        <section
+            class="process-section section-space"
+            id="process"
+           
+        >
+
+            <div class="container">
+
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        OUR PROCESS
+                    </span>
+
+                    <h2>
+                        A Process Built For Results
+                    </h2>
+
+                    <p>
+                        From the first conversation to long-term growth,
+                        every stage is planned and executed with purpose.
+                    </p>
+
+                </div>
+
+
+                <!-- VERTICAL TIMELINE -->
+
+                <div class="process-timeline">
+
+
+                    <!-- STEP 01 -->
+
+                    <article class="timeline-item">
+
+                        <div class="timeline-content">
+
+                            <span class="timeline-step">
+                                STEP 01
+                            </span>
+
+                            <h3>
+                                Discovery & Consultation
+                            </h3>
+
+                            <p>
+                                We understand your business, goals,
+                                target audience, products and current
+                                challenges.
+                            </p>
+
+                        </div>
+
+                        <div class="timeline-marker">
+
+                            <i class="fa-solid fa-comments"></i>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- STEP 02 -->
+
+                    <article class="timeline-item">
+
+                        <div class="timeline-content">
+
+                            <span class="timeline-step">
+                                STEP 02
+                            </span>
+
+                            <h3>
+                                Strategy
+                            </h3>
+
+                            <p>
+                                We develop a customized strategy based
+                                on your business objectives, market,
+                                competition and opportunities.
+                            </p>
+
+                        </div>
+
+                        <div class="timeline-marker">
+
+                            <i class="fa-solid fa-compass"></i>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- STEP 03 -->
+
+                    <article class="timeline-item">
+
+                        <div class="timeline-content">
+
+                            <span class="timeline-step">
+                                STEP 03
+                            </span>
+
+                            <h3>
+                                Planning
+                            </h3>
+
+                            <p>
+                                We define the project structure,
+                                requirements, timelines and execution plan.
+                            </p>
+
+                        </div>
+
+                        <div class="timeline-marker">
+
+                            <i class="fa-solid fa-clipboard-list"></i>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- STEP 04 -->
+
+                    <article class="timeline-item">
+
+                        <div class="timeline-content">
+
+                            <span class="timeline-step">
+                                STEP 04
+                            </span>
+
+                            <h3>
+                                Design & Setup
+                            </h3>
+
+                            <p>
+                                Our team develops the required store,
+                                listings, branding, creatives or
+                                marketplace setup.
+                            </p>
+
+                        </div>
+
+                        <div class="timeline-marker">
+
+                            <i class="fa-solid fa-pen-ruler"></i>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- STEP 05 -->
+
+                    <article class="timeline-item">
+
+                        <div class="timeline-content">
+
+                            <span class="timeline-step">
+                                STEP 05
+                            </span>
+
+                            <h3>
+                                Optimization
+                            </h3>
+
+                            <p>
+                                We analyze performance and optimize
+                                stores, listings, campaigns and
+                                operations.
+                            </p>
+
+                        </div>
+
+                        <div class="timeline-marker">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- STEP 06 -->
+
+                    <article class="timeline-item">
+
+                        <div class="timeline-content">
+
+                            <span class="timeline-step">
+                                STEP 06
+                            </span>
+
+                            <h3>
+                                Launch
+                            </h3>
+
+                            <p>
+                                Once everything is reviewed and approved,
+                                we launch the project and begin active
+                                management.
+                            </p>
+
+                        </div>
+
+                        <div class="timeline-marker">
+
+                            <i class="fa-solid fa-rocket"></i>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- STEP 07 -->
+
+                    <article class="timeline-item">
+
+                        <div class="timeline-content">
+
+                            <span class="timeline-step">
+                                STEP 07
+                            </span>
+
+                            <h3>
+                                Growth & Support
+                            </h3>
+
+                            <p>
+                                We continuously monitor performance,
+                                identify opportunities and implement
+                                strategies for sustainable growth.
+                            </p>
+
+                        </div>
+
+                        <div class="timeline-marker">
+
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             TECHNOLOGIES
+        ====================================================== -->
+
+        <section
+            class="technologies-section"
+            id="technologies"
+           
+        >
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        TECHNOLOGIES & PLATFORMS
+                    </span>
+
+                    <h2>
+                        We Work With the Best Platforms
+                    </h2>
+
+                </div>
+
+
+                <div class="technology-list">
+
+                    <span>
+                        <i class="fa-brands fa-shopify"></i>
+                        Shopify
+                    </span>
+
+                    <span>
+                        <i class="fa-brands fa-amazon"></i>
+                        Amazon
+                    </span>
+
+                    <span>
+                        <i class="fa-brands fa-tiktok"></i>
+                        TikTok Shop
+                    </span>
+
+                    <span>
+                        <i class="fa-brands fa-etsy"></i>
+                        Etsy
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        WooCommerce
+                    </span>
+
+                    <span>
+                        <i class="fa-brands fa-wordpress"></i>
+                        WordPress
+                    </span>
+
+                    <span>
+                        <i class="fa-brands fa-stripe"></i>
+                        Stripe
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-chart-simple"></i>
+                        Google Analytics
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-envelope"></i>
+                        Mailchimp
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             SUCCESS STORIES
+        ====================================================== -->
+
+        <section
+            class="success-section section-space"
+           
+        >
+
+            <div class="container">
+
+                <div class="success-grid">
+
+
+                    <div class="success-content">
+
+                        <span class="section-label">
+                            SUCCESS STORIES
+                        </span>
+
+                        <h2>
+                            Organic Audience
+                            Driven Results.
+                        </h2>
+
+                        <p>
+                            We focus on building digital experiences
+                            and eCommerce systems that create measurable
+                            business growth.
+                        </p>
+
+
+                        <div class="success-stats">
+
+                            <div>
+                                <strong>500+</strong>
+                                <span>Total Projects</span>
+                            </div>
+
+                            <div>
+                                <strong>300M+</strong>
+                                <span>Investment Managed</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="review-summary">
+
+                            <div class="review-avatars">
+
+                                <img loading="lazy" decoding="async" src="gir;.jpg" alt="">
+                                <img loading="lazy" decoding="async" src="https://t4.ftcdn.net/jpg/00/77/91/73/360_F_77917361_EaOTLo6USgDgyuVFcYVqGCkhZJiZFPvK.jpg" alt="">
+                                <img loading="lazy" decoding="async" src="https://img.magnific.com/free-photo/inspiring-new-boss_1098-93.jpg?semt=ais_hybrid&w=740&q=80" alt="">
+                                <img loading="lazy" decoding="async" src="https://img.magnific.com/free-photo/businessman-smiling-with-arms-crossed_1098-58.jpg?semt=ais_hybrid&w=740&q=80" alt="">
+
+                            </div>
+
+                            <div>
+
+                                <strong>450+ reviews</strong>
+
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="success-visual">
+
+                        <div class="success-glow"></div>
+
+                        <img loading="lazy" decoding="async"
+                            src="boy.jpg"
+                            alt="eCommerce growth analytics dashboard"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PORTFOLIO
+        ====================================================== -->
+
+        <section
+            class="portfolio-section section-space"
+            id="portfolio"
+           
+        >
+
+            <div class="container">
+
+
+                <div class="section-heading-row">
+
+                    <div>
+
+                        <span class="section-label">
+                            OUR PORTFOLIO
+                        </span>
+
+                        <h2>
+                            Real Projects. Real Results.
+                        </h2>
+
+                    </div>
+
+
+                    <a href="pages/portfolio.html" class="outline-link">
+
+                        View All Projects
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+
+                <div class="portfolio-grid">
+
+
+                    <article class="portfolio-card">
+
+                        <div class="portfolio-image">
+
+                            <img loading="lazy" decoding="async"
+                                src="amazon.jpg"
+                                alt="Amazon FBA Growth project"
+                            >
+
+                        </div>
+
+                        <div class="portfolio-info">
+
+                            <h3>Amazon FBA Growth</h3>
+
+                            <span>+26% Revenue Growth</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="portfolio-card">
+
+                        <div class="portfolio-image">
+
+                            <img loading="lazy" decoding="async"
+                                src="tiktok.jpg"
+                                alt="TikTok Commerce Store project"
+                            >
+
+                        </div>
+
+                        <div class="portfolio-info">
+
+                            <h3>TikTok Commerce Store</h3>
+
+                            <span>+62% Sales Growth</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="portfolio-card">
+
+                        <div class="portfolio-image">
+
+                            <img loading="lazy" decoding="async"
+                                src="etsy.jpg"
+                                alt="Etsy Store Optimization project"
+                            >
+
+                        </div>
+
+                        <div class="portfolio-info">
+
+                            <h3>Etsy Store Optimization</h3>
+
+                            <span>+45% Visibility Increase</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="portfolio-card">
+
+                        <div class="portfolio-image">
+
+                            <img loading="lazy" decoding="async"
+                                src="shopify.jpg"
+                                alt="Shopify Store Development project"
+                            >
+
+                        </div>
+
+                        <div class="portfolio-info">
+
+                            <h3>Shopify Store Development</h3>
+
+                            <span>+30% Conversion Rate</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="portfolio-card">
+
+                        <div class="portfolio-image">
+
+                            <img loading="lazy" decoding="async"
+                                src="wal mart market place.jpg"
+                                alt="Walmart Marketplace project"
+                            >
+
+                        </div>
+
+                        <div class="portfolio-info">
+
+                            <h3>Walmart Marketplace</h3>
+
+                            <span>+52% Sales Growth</span>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="portfolio-card">
+
+                        <div class="portfolio-image">
+
+                            <img loading="lazy" decoding="async"
+                                src="uiux.avif"
+                                alt="Brand and UI UX project"
+                            >
+
+                        </div>
+
+                        <div class="portfolio-info">
+
+                            <h3>Brand & UI/UX Design</h3>
+
+                            <span>Stronger Brand Identity</span>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             TESTIMONIALS
+             LEFT / RIGHT ARROWS
+        ====================================================== -->
+
+        <section
+            class="testimonials-section section-space"
+            id="testimonials"
+           
+        >
+
+            <div class="container">
+
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        TESTIMONIALS
+                    </span>
+
+                    <h2>
+                        What Our Clients Say
+                    </h2>
+
+                    <p>
+                        Real feedback from businesses we've helped grow.
+                    </p>
+
+                </div>
+
+
+                <div class="testimonial-slider-wrapper">
+
+                    <!-- LEFT ARROW -->
+
+                    <button
+                        class="testimonial-prev"
+                        type="button"
+                        aria-label="Previous testimonial"
+                    >
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+
+
+                    <!-- SWIPER -->
+
+                    <div class="swiper testimonial-swiper">
+
+                        <div class="swiper-wrapper">
+
+
+                            <article class="swiper-slide testimonial-card">
+
+                                <div class="testimonial-person">
+
+                                    <img loading="lazy" decoding="async"
+                                        src="https://img.magnific.com/free-photo/businessman-smiling-with-arms-crossed_1098-58.jpg?semt=ais_hybrid&w=740&q=80"
+                                        alt="Client"
+                                    >
+
+                                    <div>
+                                        <strong>James Carter</strong>
+                                        <span>CEO, HomeHaven</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="stars">
+                                    ★★★★★
+                                </div>
+
+                                <p>
+                                    Teqvora transformed our Amazon
+                                    business. Their strategy and support
+                                    helped us achieve strong growth.
+                                </p>
+
+                            </article>
+
+
+                            <article class="swiper-slide testimonial-card">
+
+                                <div class="testimonial-person">
+
+                                    <span class="avatar-initials" aria-hidden="true">SW</span>
+
+                                    <div>
+                                        <strong>Sarah Williams</strong>
+                                        <span>Founder, Glow Beauty</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="stars">
+                                    ★★★★★
+                                </div>
+
+                                <p>
+                                    Professional, responsive and
+                                    genuinely results-focused. Their
+                                    TikTok Shop support made a real
+                                    difference.
+                                </p>
+
+                            </article>
+
+
+                            <article class="swiper-slide testimonial-card">
+
+                                <div class="testimonial-person">
+
+                                    <span class="avatar-initials" aria-hidden="true">DM</span>
+
+                                    <div>
+                                        <strong>Daniel Morgan</strong>
+                                        <span>Owner, Urban Outfitters Co.</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="stars">
+                                    ★★★★★
+                                </div>
+
+                                <p>
+                                    Their team understood our goals
+                                    quickly and delivered a clean,
+                                    scalable solution.
+                                </p>
+
+                            </article>
+
+
+                            <article class="swiper-slide testimonial-card">
+
+                                <div class="testimonial-person">
+
+                                    <span class="avatar-initials" aria-hidden="true">MB</span>
+
+                                    <div>
+                                        <strong>Michael Brooks</strong>
+                                        <span>Founder, Nova Commerce</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="stars">
+                                    ★★★★★
+                                </div>
+
+                                <p>
+                                    Excellent communication and
+                                    marketplace knowledge from start
+                                    to finish.
+                                </p>
+
+                            </article>
+
+
+                            <article class="swiper-slide testimonial-card">
+
+                                <div class="testimonial-person">
+
+                                    <span class="avatar-initials" aria-hidden="true">EP</span>
+
+                                    <div>
+                                        <strong>Emily Parker</strong>
+                                        <span>Brand Director</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="stars">
+                                    ★★★★★
+                                </div>
+
+                                <p>
+                                    Our store became easier to manage
+                                    and much more focused on conversions.
+                                </p>
+
+                            </article>
+
+
+                            <article class="swiper-slide testimonial-card">
+
+                                <div class="testimonial-person">
+
+                                    <span class="avatar-initials" aria-hidden="true">RD</span>
+
+                                    <div>
+                                        <strong>Robert Davis</strong>
+                                        <span>eCommerce Founder</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="stars">
+                                    ★★★★★
+                                </div>
+
+                                <p>
+                                    Teqvora brought strategy and
+                                    execution together in a very
+                                    professional way.
+                                </p>
+
+                            </article>
+
+
+                            <article class="swiper-slide testimonial-card">
+
+                                <div class="testimonial-person">
+
+                                    <span class="avatar-initials" aria-hidden="true">OM</span>
+
+                                    <div>
+                                        <strong>Olivia Martin</strong>
+                                        <span>Marketing Manager</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="stars">
+                                    ★★★★★
+                                </div>
+
+                                <p>
+                                    The team was responsive, organized
+                                    and always focused on measurable
+                                    improvements.
+                                </p>
+
+                            </article>
+
+
+                            <article class="swiper-slide testimonial-card">
+
+                                <div class="testimonial-person">
+
+                                    <span class="avatar-initials" aria-hidden="true">WS</span>
+
+                                    <div>
+                                        <strong>William Scott</strong>
+                                        <span>Marketplace Seller</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="stars">
+                                    ★★★★★
+                                </div>
+
+                                <p>
+                                    Their marketplace knowledge helped
+                                    us make much better decisions.
+                                </p>
+
+                            </article>
+
+
+                            <article class="swiper-slide testimonial-card">
+
+                                <div class="testimonial-person">
+
+                                    <span class="avatar-initials" aria-hidden="true">EW</span>
+
+                                    <div>
+                                        <strong>Emma Wilson</strong>
+                                        <span>Founder, Modern Goods</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="stars">
+                                    ★★★★★
+                                </div>
+
+                                <p>
+                                    A smooth experience with excellent
+                                    attention to detail.
+                                </p>
+
+                            </article>
+
+
+                            <article class="swiper-slide testimonial-card">
+
+                                <div class="testimonial-person">
+
+                                    <span class="avatar-initials" aria-hidden="true">CA</span>
+
+                                    <div>
+                                        <strong>Chris Anderson</strong>
+                                        <span>Business Owner</span>
+                                    </div>
+
+                                </div>
+
+                                <div class="stars">
+                                    ★★★★★
+                                </div>
+
+                                <p>
+                                    We finally had a clear direction
+                                    for scaling our online business.
+                                </p>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RIGHT ARROW -->
+
+                    <button
+                        class="testimonial-next"
+                        type="button"
+                        aria-label="Next testimonial"
+                    >
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                </div>
+
+
+                <div class="testimonial-pagination"></div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             PACKAGES
+             WE CAN ADJUST PRICING LATER
+        ====================================================== -->
+
+        <section
+            class="packages-section section-space"
+            id="packages"
+           
+        >
+
+            <div class="container">
+
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        OUR PACKAGES
+                    </span>
+
+                    <h2>
+                        Choose the Right Plan for Your Business
+                    </h2>
+
+                    <p>
+                        Flexible solutions designed around your
+                        platform, goals and growth stage.
+                    </p>
+
+                </div>
+
+
+                <div class="packages-grid">
+
+
+                    <!-- STARTER -->
+
+                    <article class="package-card">
+
+                        <span class="package-name">
+                            Starter
+                        </span>
+
+                        <h3>
+                            $499
+                            <small>/ project</small>
+                        </h3>
+
+                        <p>
+                            For businesses getting started online.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Store setup
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Up to 10 products
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Basic optimization
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Initial consultation
+                            </li>
+
+                        </ul>
+
+                        <a href="#contact" class="package-btn">
+                            Get Started
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- GROWTH -->
+
+                    <article class="package-card featured">
+
+                        <span class="package-badge">
+                            Most Popular
+                        </span>
+
+                        <span class="package-name">
+                            Growth
+                        </span>
+
+                        <h3>
+                            $999
+                            <small>/ project</small>
+                        </h3>
+
+                        <p>
+                            For growing brands ready to scale.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Full store development
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Up to 30 products
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                SEO & conversion optimization
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Growth strategy
+                            </li>
+
+                        </ul>
+
+                        <a href="#contact" class="package-btn">
+                            Get Started
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+
+                    <!-- SCALE -->
+
+                    <article class="package-card">
+
+                        <span class="package-name">
+                            Scale
+                        </span>
+
+                        <h3>
+                            $1,499
+                            <small>/ project</small>
+                        </h3>
+
+                        <p>
+                            For established brands seeking growth.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Advanced optimization
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Unlimited products
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                PPC & marketing support
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Ongoing growth strategy
+                            </li>
+
+                        </ul>
+
+                        <a href="#contact" class="package-btn">
+                            Get Started
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             FAQ
+             SEPARATE SECTION
+        ====================================================== -->
+
+        <section
+            class="faq-section section-space"
+            id="faq"
+           
+        >
+
+            <div class="container">
+
+
+                <div class="section-heading centered">
+
+                    <span class="section-label">
+                        FAQS
+                    </span>
+
+                    <h2>
+                        Frequently Asked Questions
+                    </h2>
+
+                    <p>
+                        Answers to common questions about our services,
+                        process and support.
+                    </p>
+
+                </div>
+
+
+                <div class="faq-list">
+
+
+                    <article class="faq-item">
+
+                        <button class="faq-question" type="button">
+
+                            <span>
+                                What eCommerce platforms do you work with?
+                            </span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                We provide eCommerce solutions for Shopify,
+                                Amazon, Walmart, TikTok Shop, Etsy and
+                                other major online marketplaces.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="faq-item">
+
+                        <button class="faq-question" type="button">
+
+                            <span>
+                                Do you provide complete store management?
+                            </span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Yes. We offer end-to-end management
+                                including store setup, listings,
+                                optimization, marketplace operations,
+                                marketing and ongoing support.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="faq-item">
+
+                        <button class="faq-question" type="button">
+
+                            <span>
+                                How long does it take to launch a store?
+                            </span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                The timeline depends on the platform,
+                                number of products, customization and
+                                project scope.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="faq-item">
+
+                        <button class="faq-question" type="button">
+
+                            <span>
+                                Can you help with an existing store?
+                            </span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Yes. We can audit an existing store,
+                                identify problems and growth opportunities,
+                                and provide optimization and management.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="faq-item">
+
+                        <button class="faq-question" type="button">
+
+                            <span>
+                                Do you provide customized packages?
+                            </span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Yes. Packages can be customized according
+                                to your business size, goals, platform and
+                                required level of support.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="faq-item">
+
+                        <button class="faq-question" type="button">
+
+                            <span>
+                                How can I get started with Teqvora?
+                            </span>
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                        <div class="faq-answer">
+
+                            <p>
+                                Contact our team and tell us about your
+                                business and goals. We will recommend
+                                the most suitable solution.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             CONTACT
+             SEPARATE SECTION
+        ====================================================== -->
+
+        <section
+            class="contact-section section-space"
+            id="contact"
+           
+        >
+
+            <div class="container">
+
+
+                <div class="contact-grid">
+
+
+                    <!-- CONTACT CONTENT -->
+
+                    <div class="contact-content">
+
+                        <span class="section-label">
+                            CONTACT US
+                        </span>
+
+                        <h2>
+                            Ready to Scale
+                            Your Business?
+                        </h2>
+
+                        <p>
+                            Tell us where you want to go. Our specialists
+                            will help build the strategy, systems and
+                            digital presence to get you there.
+                        </p>
+
+
+                        <div class="contact-info-list">
+
+
+                            <a
+                                href="mailto:teqvora@gmail.com"
+                                class="contact-info"
+                            >
+
+                                <span>
+                                    <i class="fa-solid fa-envelope"></i>
+                                </span>
+
+                                <div>
+                                    <small>Email</small>
+                                    <strong>TEQVORA@GMAIL.COM</strong>
+                                </div>
+
+                            </a>
+
+
+                            <div class="contact-info">
+
+                                <span>
+                                    <i class="fa-solid fa-globe"></i>
+                                </span>
+
+                                <div>
+                                    <small>Global Digital Solutions</small>
+                                    <strong>
+                                        For ambitious businesses
+                                    </strong>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="social-links">
+
+                            <span>Follow Us</span>
+
+                            <div>
+
+                                <a
+                                    href="https://pk.linkedin.com/company/teqvorac"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="LinkedIn"
+                                >
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+
+                                <a
+                                    href="https://www.facebook.com/p/Teqvora-Pk-61592051721766/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Facebook"
+                                >
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+
+                                <a
+                                    href="https://www.instagram.com/teqvora/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Instagram"
+                                >
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FORM -->
+
+                    <div class="contact-form-wrapper">
+
+                        <div class="form-heading">
+
+                            <span>
+                                Get in Touch
+                            </span>
+
+                            <h3>
+                                Tell us about your project.
+                            </h3>
+
+                        </div>
+
+
+                        <form
+                            id="contactForm"
+                            class="contact-form"
+                        >
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label for="name">
+                                        Full Name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        placeholder="Your name"
+                                        autocomplete="name"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="email">
+                                        Email Address
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder="you@example.com"
+                                        autocomplete="email"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label for="service">
+                                        Service
+                                    </label>
+
+                                    <select
+                                        id="service"
+                                        name="service"
+                                        required
+                                    >
+
+                                        <option value="">
+                                            Select a service
+                                        </option>
+
+                                        <option>
+                                            Shopify Development
+                                        </option>
+
+                                        <option>
+                                            Amazon FBA Management
+                                        </option>
+
+                                        <option>
+                                            TikTok Shop Management
+                                        </option>
+
+                                        <option>
+                                            Walmart Marketplace
+                                        </option>
+
+                                        <option>
+                                            Etsy Store Management
+                                        </option>
+
+                                        <option>
+                                            Product Research & Sourcing
+                                        </option>
+
+                                        <option>
+                                            Amazon PPC
+                                        </option>
+
+                                        <option>
+                                            Product Listing Optimization
+                                        </option>
+
+                                        <option>
+                                            Branding & Graphic Design
+                                        </option>
+
+                                        <option>
+                                            Virtual Assistant Services
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="subject">
+                                        Subject
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="subject"
+                                        name="subject"
+                                        placeholder="How can we help?"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="message">
+                                    Message
+                                </label>
+
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="6"
+                                    placeholder="Tell us about your project..."
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+                            <label class="consent-check">
+
+                                <input
+                                    type="checkbox"
+                                    name="consent"
+                                    required
+                                >
+
+                                <span>
+                                    I agree to be contacted about this
+                                    enquiry.
+                                </span>
+
+                            </label>
+
+
+                            <button
+                                type="submit"
+                                class="form-submit"
+                            >
+                                Submit Now
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+
+                            <p
+                                class="form-status"
+                                id="formStatus"
+                                aria-live="polite"
+                            ></p>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer
+        class="site-footer"
+       
+    >
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <!-- BRAND -->
+
+                <div class="footer-brand">
+
+                    <a href="#home" class="brand">
+                           
+                        <span class="brand-mark">
+                            <img src="logo.jpeg" alt="">
+                            <span>TQ</span>
+                        </span>
+
+                        <span class="brand-text">
+                            <strong>TEQVORA</strong>
+                            <small>
+                                eCommerce & Technology Agency
+                            </small>
+                        </span>
+
+                    </a>
+
+
+                    <p>
+                        Building smarter digital experiences that
+                        turn ambitious ideas into measurable growth.
+                    </p>
+
+                </div>
+
+
+                <!-- COMPANY -->
+
+                <div class="footer-column">
+
+                    <h3>Company</h3>
+
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#process">Process</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#faq">FAQs</a>
+
+                </div>
+
+
+                <!-- SERVICES -->
+
+                <div class="footer-column">
+
+                    <h3>Services</h3>
+
+                    <a href="services/shopify.html">
+                        Shopify
+                    </a>
+
+                    <a href="services/amazon-fba.html">
+                        Amazon FBA
+                    </a>
+
+                    <a href="services/tiktok-shop.html">
+                        TikTok Shop
+                    </a>
+
+                    <a href="services/walmart.html">
+                        Walmart
+                    </a>
+
+                    <a href="services/etsy.html">
+                        Etsy
+                    </a>
+
+                </div>
+
+
+                <!-- RESOURCES -->
+
+                <div class="footer-column">
+
+                    <h3>Resources</h3>
+
+                    <a href="#faq">
+                        FAQs
+                    </a>
+
+                    <a href="#contact">
+                        Contact
+                    </a>
+
+                    <a href="pages/privacy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="pages/terms.html">
+                        Terms & Conditions
+                    </a>
+
+                </div>
+
+
+                <!-- CTA -->
+
+                <div class="footer-cta">
+
+                    <span>
+                        Ready to grow?
+                    </span>
+
+                    <h3>
+                        Let's Build.
+                        Scale. Succeed.
+                    </h3>
+
+                    <a href="#contact" class="btn btn-primary">
+
+                        Book a Consultation
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Teqvora. All Rights Reserved.
+                </p>
+
+
+                <div class="footer-socials">
+
+                    <a
+                        href="https://pk.linkedin.com/company/teqvorac"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                    >
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                    <a
+                        href="https://www.facebook.com/p/Teqvora-Pk-61592051721766/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                    >
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/teqvora/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                    >
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         BACK TO TOP
+    ========================================================== -->
+
+    <button
+        class="back-to-top"
+        id="backToTop"
+        type="button"
+        aria-label="Back to top"
+    >
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+</div>
+
+
+<!-- =============================================================
+     LIBRARIES
+============================================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+
+
+<!-- MAIN JS -->
+<script src="plasmacursor.js"></script>
+<script src="main.js"></script>
+<script src="js/config.js"></script>
+<script src="js/contact-api.js"></script>
+<script src="js/analytics.js"></script>
+
+</body>
+</html>

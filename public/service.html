@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEQVORA | Enterprise eCommerce & Automation Agency Hub</title>
+    
+    <!-- Google Fonts: Manrope & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="logo.jpeg">
+    
+    <!-- Tailwind CSS Engine -->
+    
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="service.css">
+</head>
+
+<body class="flex flex-col min-h-screen">
+
+    <!-- HEADER NAVBAR WITH INTEGRATED LIVE SEARCH -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[var(--color-border)] transition-all">
+        <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 h-[84px] flex items-center justify-between gap-4">
+            
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 shrink-0 group">
+                <div class="w-11 h-11 rounded-[var(--radius-md)] bg-[var(--color-primary)] flex items-center justify-center text-white shadow-md shadow-[var(--color-primary)]/20 group-hover:scale-105 transition-transform">
+                    <img src="logo.jpeg" alt="">
+                </div>
+                <div class="flex flex-col">
+                    
+                    <span class="text-2xl font-extrabold tracking-tight text-[var(--color-navy)] leading-none flex items-center">
+                        
+                        TEQVORA<span class="text-[var(--color-primary)]">.</span>
+                    </span>
+                    <span class="text-[10px] font-bold tracking-widest text-[var(--color-text-muted)] uppercase mt-1">Growth Engine</span>
+                </div>
+            </a>
+
+            <!-- REAL-TIME SERVICE SEARCH BAR IN NAVBAR -->
+            <div class="relative flex-1 max-w-md hidden md:block">
+                <div class="relative flex items-center">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 text-[var(--color-text-muted)] text-sm"></i>
+                    <input type="text" 
+                           id="navSearchInput" 
+                           oninput="handleSearchInput(this.value)"
+                           onfocus="handleSearchFocus()"
+                           placeholder="Search services (e.g. Shopify, Amazon PPC, TikTok, Etsy)..." 
+                           class="w-full bg-[var(--color-surface)] text-[var(--color-text)] placeholder-[var(--color-text-muted)] text-xs sm:text-sm pl-11 pr-10 py-2.5 rounded-[var(--radius-pill)] border border-transparent focus:border-[var(--color-primary)] focus:bg-white focus:outline-none transition-all">
+                    <button id="searchClearBtn" onclick="clearSearch()" class="hidden absolute right-3 text-[var(--color-text-muted)] hover:text-[var(--color-primary)] text-xs p-1">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <!-- Live Search Suggestions Dropdown -->
+                <div id="searchResultsDropdown" class="hidden absolute top-full left-0 right-0 mt-2 bg-white rounded-[var(--radius-md)] border border-[var(--color-border)] shadow-2xl p-2 z-50 search-results-dropdown">
+                    <!-- Dynamic Search Results Injected via JS -->
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-[var(--color-text-secondary)]">
+                <a href="#services" class="hover:text-[var(--color-primary)] transition-colors">Services</a>
+                <a href="#metrics" class="hover:text-[var(--color-primary)] transition-colors">Live Performance</a>
+                <a href="#process" class="hover:text-[var(--color-primary)] transition-colors">Process</a>
+                <a href="#difference" class="hover:text-[var(--color-primary)] transition-colors">Why TEQVORA</a>
+            </nav>
+
+            <!-- Actions CTA -->
+            <div class="flex items-center gap-3">
+                <button onclick="openBookingModal()" class="btn-primary text-xs sm:text-sm px-5 py-3 flex items-center gap-2">
+                    <span>Get Growth Audit</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+                <button onclick="toggleMobileMenu()" class="lg:hidden text-[var(--color-navy)] text-xl p-2 rounded-lg hover:bg-[var(--color-surface)]">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Search & Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-white border-b border-[var(--color-border)] px-4 py-4 space-y-3">
+            <div class="relative">
+                <i class="fa-solid fa-magnifying-glass absolute left-4 top-3 text-[var(--color-text-muted)] text-sm"></i>
+                <input type="text" 
+                       id="mobileSearchInput" 
+                       oninput="handleSearchInput(this.value)" 
+                       placeholder="Search services..." 
+                       class="w-full bg-[var(--color-surface)] text-sm pl-11 pr-4 py-2.5 rounded-[var(--radius-pill)] border border-transparent focus:border-[var(--color-primary)] focus:outline-none">
+            </div>
+            <a href="#services" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-[var(--color-navy)] hover:text-[var(--color-primary)] py-2 border-b border-[var(--color-border)]">All Services</a>
+            <a href="#metrics" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-[var(--color-navy)] hover:text-[var(--color-primary)] py-2 border-b border-[var(--color-border)]">Live Performance</a>
+            <a href="#process" onclick="toggleMobileMenu()" class="block text-sm font-semibold text-[var(--color-navy)] hover:text-[var(--color-primary)] py-2">Our Process</a>
+        </div>
+    </header>
+
+    <!-- SERVICE SELECTOR HORIZONTAL TABS BAR -->
+    <div id="services" class="bg-white border-b border-[var(--color-border)] sticky top-[84px] z-40 py-3.5 shadow-sm">
+        <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between mb-2 lg:hidden">
+                <span class="text-[11px] font-bold text-[var(--color-text-muted)] uppercase tracking-wider">
+                    <i class="fa-solid fa-hand-pointer text-[var(--color-primary)] mr-1"></i> Tap to select service
+                </span>
+                <span id="activeCountBadge" class="text-[10px] bg-[var(--color-surface)] text-[var(--color-text-secondary)] px-2 py-0.5 rounded-full font-bold">
+                    10 Services Available
+                </span>
+            </div>
+            <div class="flex items-center gap-2 overflow-x-auto custom-scrollbar pb-1 pt-1" id="tabContainer">
+                <!-- Tabs rendered dynamically via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="flex-grow">
+
+        <!-- HERO & LIVE PERFORMANCE DASHBOARD SECTION -->
+        <section class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
+            
+            <!-- Breadcrumb Navigation -->
+            <div class="flex items-center gap-2 text-xs sm:text-sm text-[var(--color-text-muted)] mb-6 font-medium">
+                <a href="teqvora.HTML" class="hover:text-[var(--color-primary)]">Home</a>
+                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                <a href="#services" class="hover:text-[var(--color-primary)]">Services Hub</a>
+                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                <span id="heroBreadcrumb" class="text-[var(--color-primary)] font-bold">eCommerce Automation</span>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Left Column: Copy & CTAs -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--color-primary)]/10 border border-[var(--color-primary)]/20 text-[var(--color-primary)] text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span id="heroCategoryBadge">Operating System Automation</span>
+                    </div>
+
+                    <h1 id="heroTitle" class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[var(--color-navy)] tracking-tight leading-[1.12]">
+                        Build a store that runs smarter, every single day.
+                    </h1>
+
+                    <p id="heroDescription" class="text-base sm:text-lg text-[var(--color-text-secondary)] font-normal leading-relaxed max-w-2xl">
+                        A complete operating system for product discovery, listings, fulfilment coordination, customer care and performance visibility.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <button onclick="openBookingModal()" class="btn-primary text-base px-8 py-4 flex items-center gap-3">
+                            <span id="heroPrimaryCta">Discuss Your Goals</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                        <button onclick="openRoiModal()" class="btn-secondary text-base px-7 py-4 flex items-center gap-2">
+                            <i class="fa-solid fa-calculator text-[var(--color-primary)]"></i>
+                            <span>Calculate ROI</span>
+                        </button>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="pt-6 border-t border-[var(--color-border)] flex flex-wrap items-center gap-6 text-[var(--color-text-secondary)] text-xs sm:text-sm font-semibold">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-[var(--color-green)] text-base"></i>
+                            <span>Enterprise Infrastructure</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-[var(--color-green)] text-base"></i>
+                            <span>24/7 SLA Protection</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-circle-check text-[var(--color-green)] text-base"></i>
+                            <span>Transparent Reporting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Modern Live Dashboard Visual -->
+                <div class="lg:col-span-5" id="metrics">
+                    <div class="custom-card p-6 sm:p-8 bg-white border border-[var(--color-border)] relative overflow-hidden">
+                        
+                        <div class="flex items-center justify-between pb-4 mb-6 border-b border-[var(--color-border)]">
+                            <div class="flex items-center gap-3">
+                                <div class="w-3 h-3 rounded-full bg-[var(--color-green)] pulse-dot"></div>
+                                <div>
+                                    <div class="text-[10px] font-bold text-[var(--color-text-muted)] uppercase tracking-wider">TEQVORA OS v4.8</div>
+                                    <div class="text-sm font-bold text-[var(--color-navy)]">Live Client Growth Metrics</div>
+                                </div>
+                            </div>
+                            <span class="text-xs font-bold text-[var(--color-primary)] bg-[var(--color-primary)]/10 px-3 py-1 rounded-full">
+                                Top 1% Brand
+                            </span>
+                        </div>
+
+                        <!-- Metrics Grid -->
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            
+                            <div class="bg-[var(--color-surface)] p-4 rounded-[var(--radius-md)] border border-[var(--color-border)]">
+                                <div class="text-xs text-[var(--color-text-secondary)] font-medium mb-1 flex justify-between items-center">
+                                    <span>Gross Sales</span>
+                                    <i class="fa-solid fa-chart-line text-[var(--color-green)]"></i>
+                                </div>
+                                <div class="text-2xl font-extrabold text-[var(--color-navy)]">$148,920.00</div>
+                                <div class="text-xs font-bold text-[var(--color-green)] flex items-center gap-1 mt-1">
+                                    <i class="fa-solid fa-arrow-trend-up"></i>
+                                    <span>+48.6% vs last mo</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-[var(--color-surface)] p-4 rounded-[var(--radius-md)] border border-[var(--color-border)]">
+                                <div class="text-xs text-[var(--color-text-secondary)] font-medium mb-1 flex justify-between items-center">
+                                    <span>Blended ROAS</span>
+                                    <i class="fa-solid fa-bolt text-[var(--color-primary)]"></i>
+                                </div>
+                                <div class="text-2xl font-extrabold text-[var(--color-navy)]">5.12x</div>
+                                <div class="text-xs text-[var(--color-text-muted)] font-semibold mt-1">
+                                    Omnichannel Ads
+                                </div>
+                            </div>
+
+                            <div class="bg-[var(--color-surface)] p-4 rounded-[var(--radius-md)] border border-[var(--color-border)]">
+                                <div class="text-xs text-[var(--color-text-secondary)] font-medium mb-1 flex justify-between items-center">
+                                    <span>Checkout CRO</span>
+                                    <i class="fa-solid fa-bullseye text-[var(--color-blue)]"></i>
+                                </div>
+                                <div class="text-2xl font-extrabold text-[var(--color-navy)]">4.18%</div>
+                                <div class="text-xs font-bold text-[var(--color-green)] flex items-center gap-1 mt-1">
+                                    <i class="fa-solid fa-arrow-trend-up"></i>
+                                    <span>+1.4% Conversion Lift</span>
+                                </div>
+                            </div>
+
+                            <div class="bg-[var(--color-surface)] p-4 rounded-[var(--radius-md)] border border-[var(--color-border)]">
+                                <div class="text-xs text-[var(--color-text-secondary)] font-medium mb-1 flex justify-between items-center">
+                                    <span>Fulfillment SLA</span>
+                                    <i class="fa-solid fa-truck-fast text-[var(--color-purple)]"></i>
+                                </div>
+                                <div class="text-2xl font-extrabold text-[var(--color-navy)]">&lt; 3 Hours</div>
+                                <div class="text-xs font-bold text-[var(--color-purple)] mt-1">
+                                    100% Automated
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Growth Callout -->
+                        <div class="bg-[var(--color-navy)] text-white p-4 rounded-[var(--radius-md)] flex items-center justify-between gap-3">
+                            <div>
+                                <div class="text-xs font-bold">Want similar revenue scaling?</div>
+                                <div class="text-[11px] text-[var(--color-text-muted)]">Get a customized strategy audit today</div>
+                            </div>
+                            <button onclick="openBookingModal()" class="bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white text-xs font-bold px-3.5 py-2 rounded-lg shrink-0 transition-colors">
+                                Apply Now
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- WHAT WE DO / KEY DELIVERABLES SECTION -->
+        <section class="py-16 bg-white border-y border-[var(--color-border)]">
+            <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-xs font-extrabold text-[var(--color-primary)] uppercase tracking-widest block mb-2">WHAT WE DO</span>
+                    <h2 id="whatWeDoHeading" class="text-3xl sm:text-4xl font-extrabold text-[var(--color-navy)] tracking-tight">
+                        Practical ecommerce support, built around your next move.
+                    </h2>
+                    <p id="whatWeDoSubtext" class="mt-3 text-[var(--color-text-secondary)] text-base">
+                        We start by understanding where your business is today, what is getting in the way and what a valuable result looks like.
+                    </p>
+                </div>
+
+                <!-- Deliverables Grid -->
+                <div id="deliverablesGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Injected dynamically via JS -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- DELIVERY PROCESS SECTION -->
+        <section id="process" class="py-20">
+            <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-extrabold text-[var(--color-primary)] uppercase tracking-widest block mb-2">OUR METHODOLOGY</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[var(--color-navy)] tracking-tight">
+                        A clear path from first conversation to measurable progress.
+                    </h2>
+                    <p class="mt-3 text-[var(--color-text-secondary)] text-base">
+                        There is no one-size-fits-all playbook. We use a proven structure, then adapt the detail to your market, audience and capacity.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <div class="custom-card p-8 flex flex-col justify-between relative">
+                        <div>
+                            <div class="text-4xl font-extrabold text-[var(--color-primary)] mb-4 font-mono">01</div>
+                            <h3 class="text-xl font-bold text-[var(--color-navy)] mb-2">Discover & Audit</h3>
+                            <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                                We review your goals, current store architecture, bottlenecks, and high-value quick wins.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-[var(--color-border)] text-xs text-[var(--color-text-muted)] font-semibold">
+                            Phase 1 • Blueprint & Audit
+                        </div>
+                    </div>
+
+                    <div class="custom-card p-8 flex flex-col justify-between relative">
+                        <div>
+                            <div class="text-4xl font-extrabold text-[var(--color-primary)] mb-4 font-mono">02</div>
+                            <h3 class="text-xl font-bold text-[var(--color-navy)] mb-2">Build Strategic Plan</h3>
+                            <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                                Receive a practical execution roadmap with responsibilities, exact timelines, and optimal tech stack.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-[var(--color-border)] text-xs text-[var(--color-text-muted)] font-semibold">
+                            Phase 2 • Architecture Design
+                        </div>
+                    </div>
+
+                    <div class="custom-card p-8 flex flex-col justify-between relative">
+                        <div>
+                            <div class="text-4xl font-extrabold text-[var(--color-primary)] mb-4 font-mono">03</div>
+                            <h3 class="text-xl font-bold text-[var(--color-navy)] mb-2">Execute & Deploy</h3>
+                            <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                                Our dedicated specialists build, optimize, and manage moving parts with strict SLA quality control.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-[var(--color-border)] text-xs text-[var(--color-text-muted)] font-semibold">
+                            Phase 3 • Active Implementation
+                        </div>
+                    </div>
+
+                    <div class="custom-card p-8 flex flex-col justify-between relative">
+                        <div>
+                            <div class="text-4xl font-extrabold text-[var(--color-primary)] mb-4 font-mono">04</div>
+                            <h3 class="text-xl font-bold text-[var(--color-navy)] mb-2">Iterate & Scale</h3>
+                            <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                                We monitor KPIs daily, report transparently, and continuously optimize campaigns for compounded growth.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-[var(--color-border)] text-xs text-[var(--color-text-muted)] font-semibold">
+                            Phase 4 • Growth Scaling
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- WHY TEQVORA DIFFERENCE SECTION -->
+        <section id="difference" class="py-20 bg-white border-t border-[var(--color-border)]">
+            <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-xs font-extrabold text-[var(--color-primary)] uppercase tracking-widest block mb-2">THE ADVANTAGE</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-[var(--color-navy)] tracking-tight">
+                        What a stronger operating system gives your business.
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    
+                    <div class="custom-card p-8 flex gap-6 items-start">
+                        <div class="w-12 h-12 rounded-[var(--radius-md)] bg-[var(--color-primary)]/10 text-[var(--color-primary)] font-extrabold text-xl flex items-center justify-center shrink-0">
+                            01
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-[var(--color-navy)] mb-2">Clear Setup & Documented Execution</h3>
+                            <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                                Engineered systems that eliminate guesswork, giving your brand a rock-solid operational foundation for aggressive scaling.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="custom-card p-8 flex gap-6 items-start">
+                        <div class="w-12 h-12 rounded-[var(--radius-md)] bg-[var(--color-primary)]/10 text-[var(--color-primary)] font-extrabold text-xl flex items-center justify-center shrink-0">
+                            02
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-[var(--color-navy)] mb-2">Automated Repeatable Workflows</h3>
+                            <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                                Custom software & API integrations that remove manual labor, prevent stockouts, and streamline logistics.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="custom-card p-8 flex gap-6 items-start">
+                        <div class="w-12 h-12 rounded-[var(--radius-md)] bg-[var(--color-primary)]/10 text-[var(--color-primary)] font-extrabold text-xl flex items-center justify-center shrink-0">
+                            03
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-[var(--color-navy)] mb-2">High-Conversion Funnel Architecture</h3>
+                            <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                                Conversion rate optimization built directly into store design and advertising funnels for maximum customer LTV.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="custom-card p-8 flex gap-6 items-start">
+                        <div class="w-12 h-12 rounded-[var(--radius-md)] bg-[var(--color-primary)]/10 text-[var(--color-primary)] font-extrabold text-xl flex items-center justify-center shrink-0">
+                            04
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-[var(--color-navy)] mb-2">Transparent Weekly Profit Reporting</h3>
+                            <p class="text-sm text-[var(--color-text-secondary)] leading-relaxed">
+                                Clear visibility into contribution margin, ROAS, unit economics, and next prioritized tasks without confusing fluff.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EXPLORE RELATED SERVICES SECTION -->
+        <section class="py-16">
+            <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10">
+                    <div>
+                        <span class="text-xs font-extrabold text-[var(--color-primary)] uppercase tracking-widest block mb-2">EXPLORE SOLUTIONS</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-[var(--color-navy)] tracking-tight">
+                            Specialist frameworks tailored for your business model.
+                        </h2>
+                    </div>
+                </div>
+
+                <div id="exploreGrid" class="grid md:grid-cols-3 gap-6">
+                    <!-- Related cards injected dynamically -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- LEAD CAPTURE SECTION -->
+        <section class="py-20 bg-[var(--color-navy)] text-white relative">
+            <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-5 space-y-6">
+                        <span class="text-xs font-extrabold text-[var(--color-primary)] uppercase tracking-widest block">LET'S CONNECT</span>
+                        <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+                            Ready to scale your eCommerce business?
+                        </h2>
+                        <p class="text-base text-slate-300 leading-relaxed">
+                            Tell us about your brand goals. Our senior strategists will analyze your store and send a tailored growth blueprint.
+                        </p>
+
+                        <div class="space-y-4 pt-2">
+                            <div class="flex items-center gap-3 text-slate-300 text-sm font-medium">
+                                <div class="w-8 h-8 rounded-full bg-white/10 text-[var(--color-primary)] flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <span>24-Hour Response Guarantee</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-slate-300 text-sm font-medium">
+                                <div class="w-8 h-8 rounded-full bg-white/10 text-[var(--color-primary)] flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-lock"></i>
+                                </div>
+                                <span>100% Confidential Consultation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+    <!-- FORM -->
+
+                    <div class="contact-form-wrapper">
+
+                        <div class="form-heading">
+
+                            <span>
+                                Get in Touch
+                            </span>
+
+                            <h3>
+                                Tell us about your project.
+                            </h3>
+
+                        </div>
+
+
+                        <form
+                            id="contactForm"
+                            class="contact-form"
+                            onsubmit="handleFormSubmit(event)"
+                        >
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label for="name">
+                                        Full Name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        placeholder="Your name"
+                                        autocomplete="name"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="email">
+                                        Email Address
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        placeholder="you@example.com"
+                                        autocomplete="email"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label for="service">
+                                        Service
+                                    </label>
+
+                                    <select
+                                        id="service"
+                                        name="service"
+                                        required
+                                    >
+
+                                        <option value="">
+                                            Select a service
+                                        </option>
+
+                                        <option>
+                                            Shopify Development
+                                        </option>
+
+                                        <option>
+                                            Amazon FBA Management
+                                        </option>
+
+                                        <option>
+                                            TikTok Shop Management
+                                        </option>
+
+                                        <option>
+                                            Walmart Marketplace
+                                        </option>
+
+                                        <option>
+                                            Etsy Store Management
+                                        </option>
+
+                                        <option>
+                                            Product Research & Sourcing
+                                        </option>
+
+                                        <option>
+                                            Amazon PPC
+                                        </option>
+
+                                        <option>
+                                            Product Listing Optimization
+                                        </option>
+
+                                        <option>
+                                            Branding & Graphic Design
+                                        </option>
+
+                                        <option>
+                                            Virtual Assistant Services
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="subject">
+                                        Subject
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="subject"
+                                        name="subject"
+                                        placeholder="How can we help?"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="message">
+                                    Message
+                                </label>
+
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="6"
+                                    placeholder="Tell us about your project..."
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+                            <label class="consent-check">
+
+                                <input
+                                    type="checkbox"
+                                    name="consent"
+                                    required
+                                >
+
+                                <span>
+                                    I agree to be contacted about this
+                                    enquiry.
+                                </span>
+
+                            </label>
+
+
+                            <button
+                                type="submit"
+                                class="form-submit"
+                            >
+                                Submit Now
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+
+                            <p
+                                class="form-status"
+                                id="formStatus"
+                                aria-live="polite"
+                            ></p>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-[var(--color-border)] py-10">
+        <div class="max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-[var(--radius-sm)] bg-[var(--color-primary)] flex items-center justify-center text-white font-bold">
+                    <i class="fa-solid fa-bolt text-sm"></i>
+                </div>
+                <span class="text-xl font-extrabold text-[var(--color-navy)] tracking-tight">TEQVORA</span>
+            </div>
+
+            <p class="text-xs text-[var(--color-text-muted)] text-center md:text-left max-w-xl">
+                Empowering eCommerce brands through custom software automation, multi-channel scaling, conversion optimization, and strategic agency execution.
+            </p>
+
+            <div class="text-xs font-semibold text-[var(--color-text-secondary)]">
+                © 2026 TEQVORA Systems Inc. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- STRATEGY CONSULTATION MODAL -->
+    <div id="bookingModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white border border-[var(--color-border)] max-w-md w-full rounded-[var(--radius-lg)] p-8 relative shadow-2xl">
+            <button onclick="closeBookingModal()" class="absolute top-4 right-4 text-[var(--color-text-muted)] hover:text-[var(--color-navy)] text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 rounded-[var(--radius-md)] bg-[var(--color-primary)]/10 text-[var(--color-primary)] flex items-center justify-center mx-auto mb-3 text-xl">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-[var(--color-navy)]">Book Strategy Audit</h3>
+                <p class="text-xs text-[var(--color-text-secondary)] mt-1">Select your service focus with a TEQVORA Growth Partner.</p>
+            </div>
+
+            <form onsubmit="handleModalSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-[var(--color-navy)] uppercase tracking-wider mb-2">Service Category</label>
+                    <input type="hidden" name="type" value="strategy-audit">
+                    <input id="modalServiceInput" name="service" type="text" readonly class="w-full bg-[var(--color-surface)] border border-[var(--color-border)] rounded-[var(--radius-md)] px-4 py-2.5 text-sm text-[var(--color-primary)] font-bold">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-[var(--color-navy)] uppercase tracking-wider mb-2">Your Name</label>
+                    <input type="text" name="name" autocomplete="name" required placeholder="Full Name" class="w-full bg-[var(--color-surface)] border border-[var(--color-border)] rounded-[var(--radius-md)] px-4 py-2.5 text-sm text-[var(--color-text)] focus:outline-none focus:border-[var(--color-primary)]">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-[var(--color-navy)] uppercase tracking-wider mb-2">Work Email</label>
+                    <input type="email" name="email" autocomplete="email" required placeholder="work@company.com" class="w-full bg-[var(--color-surface)] border border-[var(--color-border)] rounded-[var(--radius-md)] px-4 py-2.5 text-sm text-[var(--color-text)] focus:outline-none focus:border-[var(--color-primary)]">
+                </div>
+                <button type="submit" class="btn-primary w-full py-3.5 text-sm">
+                    Confirm Free Strategy Call
+                </button>
+                <p id="modalStatus" class="form-status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- ROI CALCULATOR MODAL -->
+    <div id="roiModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white border border-[var(--color-border)] max-w-lg w-full rounded-[var(--radius-lg)] p-8 relative shadow-2xl">
+            <button onclick="closeRoiModal()" class="absolute top-4 right-4 text-[var(--color-text-muted)] hover:text-[var(--color-navy)] text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 rounded-[var(--radius-md)] bg-[var(--color-primary)]/10 text-[var(--color-primary)] flex items-center justify-center mx-auto mb-3 text-xl">
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-[var(--color-navy)]">Revenue Impact Calculator</h3>
+                <p class="text-xs text-[var(--color-text-secondary)] mt-1">Estimate potential store growth with TEQVORA optimization</p>
+            </div>
+
+            <div class="space-y-6">
+                <div>
+                    <div class="flex justify-between text-xs font-bold text-[var(--color-navy)] mb-2">
+                        <span>Current Monthly Store Revenue</span>
+                        <span id="revVal" class="text-[var(--color-primary)] font-mono">$30,000</span>
+                    </div>
+                    <input type="range" id="revSlider" min="5000" max="250000" step="5000" value="30000" oninput="calculateRoi()" class="w-full accent-[var(--color-primary)]">
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 bg-[var(--color-surface)] p-4 rounded-[var(--radius-md)] border border-[var(--color-border)] text-center">
+                    <div>
+                        <div class="text-xs text-[var(--color-text-secondary)] font-medium">Estimated 6-Mo Revenue</div>
+                        <div id="estRev" class="text-2xl font-extrabold text-[var(--color-green)] mt-1">$42,840/mo</div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-[var(--color-text-secondary)] font-medium">Projected Annual Lift</div>
+                        <div id="estLift" class="text-2xl font-extrabold text-[var(--color-primary)] mt-1">+$154,080</div>
+                    </div>
+                </div>
+
+                <button onclick="closeRoiModal(); openBookingModal();" class="btn-primary w-full py-3.5 text-sm">
+                    Claim This Scale Plan
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CUSTOM TOAST MESSAGE NOTIFICATION -->
+    <div id="toastNotification" class="toast-notification fixed bottom-6 right-6 z-50 bg-[var(--color-navy)] text-white px-6 py-4 rounded-[var(--radius-md)] shadow-2xl flex items-center gap-3 border border-slate-700">
+        <div class="w-8 h-8 rounded-full bg-[var(--color-green)] text-white flex items-center justify-center font-bold text-sm">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <div>
+            <div id="toastTitle" class="text-xs font-bold text-white">Success!</div>
+            <div id="toastMessage" class="text-xs text-slate-300">Your request has been processed.</div>
+        </div>
+    </div>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#FF4D00',
+                            dark: '#E64400',
+                            soft: '#FF6A2A',
+                        },
+                        navy: {
+                            DEFAULT: '#172033',
+                            surface: '#25324A',
+                        },
+                        tech: {
+                            blue: '#4F7CFF',
+                            purple: '#7657FF',
+                            green: '#1FA774',
+                        }
+                    },
+                    fontFamily: {
+                        heading: ['Manrope', 'Inter', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="plasmacursor.js"></script>
+    <script src="services_data.js"></script>
+    <script src="service.js"></script>
+    <script src="js/analytics.js"></script>
+    
+</body>
+</html>

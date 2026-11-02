@@ -1,0 +1,24 @@
+{
+  "name": "teqvora-website",
+  "version": "1.0.0",
+  "description": "TEQVORA eCommerce agency website with Express and MongoDB backend",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test",
+    "check": "node scripts/check-syntax.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "mongoose": "^8.9.5",
+    "nodemailer": "^6.9.16"
+  }
+}

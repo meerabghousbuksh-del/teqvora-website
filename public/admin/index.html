@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>TEQVORA Admin</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+    <!-- SIGN IN -->
+    <main class="login" id="loginView">
+        <form class="login-card" id="loginForm" novalidate>
+            <span class="brand-name">TEQVORA</span>
+            <h1>Admin sign in</h1>
+            <p>Enter the dashboard password to view enquiries and website traffic.</p>
+
+            <label for="passwordInput">Password</label>
+            <input type="password" id="passwordInput" name="password" autocomplete="current-password" required>
+
+            <p class="form-message" id="loginMessage" role="alert"></p>
+
+            <button type="submit" class="button primary" id="loginButton">Sign in</button>
+        </form>
+    </main>
+
+    <!-- DASHBOARD -->
+    <div id="dashboardView" hidden>
+
+        <header class="topbar">
+            <div class="container topbar-inner">
+                <span class="brand-name">TEQVORA <small>Admin</small></span>
+                <button type="button" class="button secondary" id="signOutButton">Sign out</button>
+            </div>
+        </header>
+
+        <main class="container dashboard">
+
+            <p class="banner" id="dashboardMessage" role="alert" hidden></p>
+
+            <section aria-label="Summary" class="stats">
+                <article class="stat-card"><span>Total enquiries</span><strong id="statTotal">-</strong></article>
+                <article class="stat-card highlight"><span>New</span><strong id="statNew">-</strong></article>
+                <article class="stat-card"><span>Strategy audit requests</span><strong id="statAudits">-</strong></article>
+                <article class="stat-card"><span>Visits today</span><strong id="statToday">-</strong></article>
+                <article class="stat-card"><span>Visits, last 7 days</span><strong id="stat7Days">-</strong></article>
+                <article class="stat-card"><span>Visits, all time</span><strong id="statVisits">-</strong></article>
+            </section>
+
+            <section class="panels" aria-label="Traffic">
+                <article class="panel">
+                    <h2>Visits, last 14 days <small>(UTC days)</small></h2>
+                    <div class="chart" id="visitsChart" role="img" aria-label="Bar chart of daily visits"></div>
+                </article>
+                <article class="panel">
+                    <h2>Top pages</h2>
+                    <ol class="top-pages" id="topPages"></ol>
+                </article>
+            </section>
+
+            <section class="panel inquiries" aria-label="Enquiries">
+                <div class="inquiries-header">
+                    <h2>Enquiries</h2>
+                    <div class="filters">
+                        <input type="search" id="searchInput" placeholder="Search name, email, service" aria-label="Search enquiries">
+                        <select id="statusFilter" aria-label="Filter by status">
+                            <option value="">All statuses</option>
+                            <option value="new">New</option>
+                            <option value="contacted">Contacted</option>
+                            <option value="closed">Closed</option>
+                        </select>
+                        <select id="typeFilter" aria-label="Filter by type">
+                            <option value="">All types</option>
+                            <option value="contact">Contact form</option>
+                            <option value="strategy-audit">Strategy audit</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="table-wrap">
+                    <table class="inquiry-table">
+                        <thead>
+                            <tr>
+                                <th>Received</th>
+                                <th>Contact</th>
+                                <th>Request</th>
+                                <th>Message</th>
+                                <th>Status</th>
+                                <th><span class="visually-hidden">Actions</span></th>
+                            </tr>
+                        </thead>
+                        <tbody id="inquiryRows"></tbody>
+                    </table>
+                </div>
+
+                <p class="empty-state" id="inquiryState" role="status"></p>
+
+                <div class="pager">
+                    <button type="button" class="button secondary" id="previousPage">Previous</button>
+                    <span id="pageLabel"></span>
+                    <button type="button" class="button secondary" id="nextPage">Next</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="db.js"></script>
+    <script src="env.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
