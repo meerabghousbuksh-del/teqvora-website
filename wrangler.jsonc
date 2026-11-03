@@ -1,14 +1,24 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "teqvora",
-  "main": "src/index.js",
-  "compatibility_date": "2026-11-03",
-  "compatibility_flags": ["nodejs_compat"],
 
+  "name": "teqvora",
+  "main": "./worker.js",
+  "compatibility_date": "2026-11-03",
+
+  // Node.js compatibility is required for packages such as Mongoose.
+  // Is compatibility date par Cloudflare ise automatically enable karta hai.
+
+  "vars": {
+    "NODE_ENV": "production",
+    "PORT": "3000",
+    "TRUST_PROXY": "true"
+  },
+
+  // Existing frontend files.
   "assets": {
     "directory": "./public",
     "binding": "ASSETS",
-    "run_worker_first": ["/api/*"]
+    "run_worker_first": true
   },
 
   "observability": {

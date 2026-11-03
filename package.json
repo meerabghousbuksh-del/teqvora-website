@@ -18,7 +18,10 @@
     "dotenv": "^16.6.1",
     "express": "^4.21.2",
     "helmet": "^8.0.0",
-    "mongoose": "^8.9.5",
+    "mongoose": "^9.11.4",
     "nodemailer": "^6.9.16"
+  },
+  "devDependencies": {
+    "wrangler": "^4.157.0"
   }
 }
