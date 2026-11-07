@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
 
-  "name": "teqvora",
+  "name": "teqvora_website",
   "main": "./worker.js",
   "compatibility_date": "2026-11-03",
 
