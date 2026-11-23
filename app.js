@@ -9,8 +9,8 @@ const analyticsRoutes = require('./routes/analyticsRoutes');
 const adminRoutes = require('./routes/adminRoutes');
 const { notFoundApi, errorHandler } = require('./middleware/errorHandler');
 
-const PUBLIC_DIR = path.join(__dirname, 'public');
-
+const BASE_DIR = typeof __dirname !== 'undefined' ? __dirname : '/';
+const PUBLIC_DIR = path.join(BASE_DIR, 'public');
 function createApp() {
     const app = express();
 
