@@ -23,5 +23,9 @@
   },
   "devDependencies": {
     "wrangler": "^4.157.0"
+  },
+  "overrides": {
+    "iconv-lite": "^0.7.0"
   }
+}
 }
