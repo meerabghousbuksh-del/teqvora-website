@@ -11,14 +11,22 @@ const PORT = Number(process.env.PORT || config.port || 3000);
 
 const app = createApp();
 
-// Start the existing Express application.
-app.listen(PORT);
+// Start Express lazily. Workers do not allow I/O (listen) in global scope,
+// so the server is started on the first request, inside the fetch handler.
+let serverStarted = false;
+
+function ensureServer() {
+  if (!serverStarted) {
+    app.listen(PORT);
+    serverStarted = true;
+  }
+}
 
 // Forward Cloudflare requests to Express.
 function handleExpress(request) {
+  ensureServer();
   return handleAsNodeRequest(PORT, request);
 }
-
 // Serialize database requests because Mongoose uses one shared connection.
 let databaseQueue = Promise.resolve();
 
