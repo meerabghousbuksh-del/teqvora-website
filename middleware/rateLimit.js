@@ -4,15 +4,22 @@
 function createRateLimiter({ windowMs, max, message, now = Date.now }) {
     const hits = new Map();
 
-    const sweepTimer = setInterval(() => {
-        const current = now();
-        for (const [key, entry] of hits) {
-            if (entry.resetAt <= current) hits.delete(key);
-        }
-    }, windowMs);
-    sweepTimer.unref();
+    // The cleanup timer starts on the first request, not at import time:
+    // Cloudflare Workers do not allow timers in global scope.
+    let sweepTimer = null;
+    function startSweeper() {
+        if (sweepTimer) return;
+        sweepTimer = setInterval(() => {
+            const current = now();
+            for (const [key, entry] of hits) {
+                if (entry.resetAt <= current) hits.delete(key);
+            }
+        }, windowMs);
+        if (typeof sweepTimer.unref === 'function') sweepTimer.unref();
+    }
 
     return function rateLimit(req, res, next) {
+        startSweeper();
         const key = req.ip || 'unknown';
         const current = now();
         let entry = hits.get(key);
